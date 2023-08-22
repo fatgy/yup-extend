@@ -1,0 +1,48 @@
+{
+	"name": "@fatgy/yup-extend",
+	"version": "0.0.0",
+	"description": "Yup Extend",
+	"license": "MIT",
+	"repository": "fatgy/yup-extend",
+	"author": {
+		"name": "Shatmongkol Amaraveja",
+		"email": "fatgygy@gmail.com"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"type": "module",
+	"exports": {
+		"default": "./dist/index.js",
+		"types": "./dist/index.d.ts"
+	},
+	"engines": {
+		"node": ">= 16"
+	},
+	"scripts": {
+		"build": "tsc",
+		"test": "tsc --noEmit && xo && NODE_OPTIONS='--loader=ts-node/esm --no-warnings=ExperimentalWarning' ava"
+	},
+	"files": [
+		"dist"
+	],
+	"dependencies": {
+		"yup": "^1.2.0"
+	},
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^4.0.0",
+		"ava": "^5.3.1",
+		"ts-node": "^10.9.1",
+		"xo": "^0.56.0"
+	},
+	"xo": {
+		"rules": {
+			"func-names": "off"
+		}
+	},
+	"ava": {
+		"extensions": {
+			"ts": "module"
+		}
+	}
+}
